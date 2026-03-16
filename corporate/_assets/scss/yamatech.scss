@@ -1,0 +1,389 @@
+@import "mq";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+html,body{
+	font-family: YakuHanJP, 'Noto Sans JP', sans-serif;
+	letter-spacing: 0.08em;
+	.container{
+		.mainvisual{
+			background-image: url(../images/mv_bg.jpg);
+			-webkit-background-size: cover;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			@include sp{
+				height:240px;
+			}
+			@include pc{
+				height: 450px;
+			}
+			h1{
+				@include sp{
+					width: 80%;
+				}
+
+			}
+		}
+		nav{
+			background-color: #004ea2;
+			width: 100%;
+			@include sp{
+				height:10px;
+				margin-bottom: 50px;
+			}
+			@include pc{
+				padding: 17px 0;
+			}
+			ul{
+				text-align: center;
+				@include sp{
+					display: none;
+				}
+				li{
+					display: inline-block;
+					margin:0 60px;
+					position: relative;
+					a{
+						color: #fff;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 1;
+					}
+					&:after{
+						content: "";
+						background-image: url(../images/nav_slash.png);
+						display: block;
+						width: 17px;
+						height: 28px;
+						position: absolute;
+						right: -68px;
+						top: -5px;
+					}
+					&:last-child{
+						&:after{
+							display:none;
+						}
+					}
+				}
+			}
+		}
+
+		section{
+			position: relative;
+			margin-left:auto;
+			margin-right:auto;
+			@include sp{
+				font-size:15px;
+				width: auto;
+				margin-left: 20px;
+				margin-right: 20px;
+				margin-bottom: 70px;
+			}
+			@include pc{
+				font-size:14px;
+				width: 800px;
+				margin-top:100px;
+			}
+			h2{
+				color: #005e87;
+				font-weight: 500;
+				line-height: 1;
+				text-align: center;
+				@include sp{
+					font-size:24px;
+					margin-bottom: 20px;
+				}
+				@include pc{
+					font-size: 30px;
+					margin-bottom: 50px;
+				}
+			}
+			h3{
+				font-weight: 700;
+				line-height: 1;
+				text-align: center;
+				@include sp{
+					font-size:18px;
+					margin-bottom: 25px;
+				}
+				@include pc{
+					font-size:20px;
+					margin-bottom: 35px;
+				}
+				span{
+					position: relative;
+					&:after{
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 2px;
+						background-color: #005e87;
+						bottom: -5px;
+						left: 0;
+					}
+				}
+			}
+			p{
+				@include sp{
+					line-height: 1.7;
+				}
+				@include pc{
+					line-height: 2;
+				}
+				&.center{
+					text-align: center;
+				}
+			}
+			dl{
+				border-bottom: 1px solid #d4d4d4;
+				dt{
+					@include sp{
+						border-top: 1px solid #d4d4d4;
+						text-align: left;
+						padding-top: 10px;
+					}
+					@include pc{
+						border-top: 1px solid #d4d4d4;
+						float: left;
+						padding: 15px 0;
+						width: 215px;
+					}
+					span{
+						font-weight: 700;
+						@include pc{
+							display: block;
+							text-align: center;
+							margin: auto 0 auto auto;
+							width: 100px;
+						}
+					}
+				}
+				dd{
+					@include sp{
+						padding-bottom: 10px;
+					}
+					@include pc{
+						border-top: 1px solid #d4d4d4;
+						padding:15px 15px 15px 260px;
+					}
+				}
+				&.outline{
+					dt{
+						span{}
+					}
+				}
+			}
+			.content_wrap{
+				@include sp{
+					margin-bottom: 50px;
+				}
+				@include pc{
+					margin-bottom: 80px;
+				}
+				.service_wrap{
+					@include sp{
+						margin-top: 20px;
+					}
+					@include pc{
+						display: flex;
+						justify-content: space-between;
+						margin-top: 30px;
+					}
+					.service_box{
+						box-sizing: border-box;
+						border:4px solid #99bfcf;
+						@include sp{
+							padding:15px;
+							margin-bottom: 20px;
+							&:last-child{
+								margin-bottom: 0;
+							}
+						}
+						@include pc{
+							padding: 15px;
+							width: 260px;
+						}
+						h4{
+							font-weight: 700;
+							text-align: center;
+							@include sp{
+								font-size: 16px;
+								margin-bottom: 15px;
+							}
+							@include pc{
+								font-size: 16px;
+								margin-bottom: 15px;
+							}
+						}
+						ul{
+							@include sp{
+								padding: 0 0 0 15px;
+							}
+							@include pc{
+								padding: 0 0 0 15px;
+							}
+							li{
+								color: #ff6600;
+								list-style-type: disc;
+								position: relative;
+								@include sp{
+									font-size: 12px;
+									margin-bottom: 7px;
+								}
+								@include pc{
+									font-size: 12px;
+									margin-bottom: 7px;
+								}
+								&:last-child{
+									margin-bottom: 0;
+								}
+								span{
+									color: #000;
+									position: relative;
+									@include pc{
+										left: -3px;
+									}
+								}
+							}
+						}
+						&.horizon{
+							width: 100%;
+							ul{
+								padding: 0;
+								li{
+									float: left;
+									list-style-position: inside;
+									margin-left: 20px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.contact{
+			@include sp{
+				margin-left: 20px;
+				margin-right: 20px;
+				width: auto;
+
+			}
+			@include pc{
+				margin-left: auto;
+				margin-right: auto;
+				width: 800px;
+			}
+			h2{
+				background-color: #004ea2;
+				color: #fff;
+				text-align: center;
+				line-height: 1;
+				@include sp{
+					font-size: 16px;
+					padding:5px 0;
+					margin-bottom: 20px;
+				}
+				@include pc{
+					font-size:28px;
+					padding: 8px 0;
+					margin-bottom: 40px;
+				}
+			}
+			p{
+				text-align: center;
+				&.company{
+					@include sp{
+						margin:0 auto 15px auto;
+						width: 70%;
+
+					}
+					@include pc{
+						margin-bottom: 20px;
+					}
+				}
+				&.notice{
+					font-size:80%;
+				}
+			}
+			table{
+				@include sp{
+					width: 100%;
+					margin:0 auto;
+				}
+				@include pc{
+					width: auto;
+					margin:0 auto;
+				}
+				th{
+					span{
+						border:1px solid #004ea2;
+						color: #004ea2;
+						display: block;
+						font-weight: normal;
+						line-height: 1;
+						@include sp{
+							font-size:14px;
+							padding: 5px;
+							width: auto;
+							white-space: nowrap;
+						}
+						@include pc{
+							font-size:14px;
+							padding: 5px 0;
+							width: 70px;
+						}
+					}
+				}
+				td{
+					@include sp{
+						padding: 10px;
+					}
+					@include pc{
+						padding: 10px 0 10px 15px;
+					}
+					a{
+						color: #004ea2;
+						font-weight: 700;
+						line-height: 1;
+						&.tel{
+							@include pc{
+								font-size:32px;
+							}
+						}
+						&.mail{
+							@include sp{
+								font-size:14px;
+							}
+							@include pc{
+								font-size:18px;
+							}
+						}
+
+					}
+				}
+			}
+		}
+		footer{
+			@include sp{
+				margin-top: 80px;
+			}
+			@include pc{
+				margin-top: 100px;
+			}
+			.copy{
+				text-align: center;
+				@include sp{
+					font-size: 10px;
+					padding: 10px 0;
+				}
+				@include pc{
+					font-size: 12px;
+					padding: 15px 0;
+				}
+			}
+		}
+	}
+}

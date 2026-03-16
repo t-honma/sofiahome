@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* reset */
+html,body{
+	height: 100%;
+}
+body{
+	margin:0;
+	padding:0;
+}
+img {
+    border: medium none;
+    width: 100%;
+    height:auto;
+}
+div{
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, ul, ol, li, p,dl,dt,dd{
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+ul{
+  font-size: 0;
+}
+li{
+  font-size: 100%;
+}
+ul, ol, li {
+    list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+input[type="button"],
+input[type="text"],
+input[type="submit"] {
+   -webkit-appearance: none;
+   border-radius: 0;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}

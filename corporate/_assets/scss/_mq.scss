@@ -1,0 +1,62 @@
+@charset 'UTF-8';
+
+
+@mixin se{
+  @media (max-width:320px){
+    @content;
+  }
+}
+@mixin sp{
+  @media (max-width:768px){
+    @content;
+  }
+}
+@mixin pc{
+  @media (min-width:769px){
+    @content;
+  }
+}
+
+@mixin large{
+  @media (min-width:1281px){
+    @content;
+  }
+}
+
+
+@mixin mq_ie{
+  @media all and (-ms-high-contrast: none){
+    @content;
+  }
+}
+
+
+@function get_vw($size, $viewport:640){
+  @return ($size / $viewport)*100vw;
+}
+
+@mixin AbsXCenYCen() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.disp_pc{
+  @include sp{
+    display: none;
+  }
+  @include pc{
+    display: block;
+  }
+}
+.disp_sp{
+  @include sp{
+    display: block;
+  }
+  @include pc{
+    display: none;
+  }
+}
