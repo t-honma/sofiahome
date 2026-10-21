@@ -30,6 +30,28 @@
 
         <script type="text/javascript">
             $(function () {
+                $(".mainvisual.idumi").slick({
+                    infinite: true,
+                    dots: false,
+                    arrows: false,
+                    slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    speed: 800,
+                    fade: true,
+                    cssEase: "linear",
+                });
+                $(".work_slider").slick({
+                    infinite: true,
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    speed: 800,
+                    fade: true,
+                    cssEase: "linear",
+                });
                 $(".slider").slick({
                     infinite: true,
                     dots: true,
@@ -60,7 +82,13 @@
 
             <!-- メインビジュアル -->
             <p class="line_top disp_sp">&nbsp;</p>
-            <div class="mainvisual subpage idumi">&nbsp;</div>
+            <div class="mainvisual subpage idumi">
+                <div><img src="../img/facilities/idumi/idumi_mainvisual_001.jpg" alt="" /></div>
+                <div><img src="../img/facilities/idumi/idumi_mainvisual_002.jpg" alt="" /></div>
+                <!-- <div><img src="../img/facilities/idumi/idumi_mainvisual_003.jpg" alt="" /></div> -->
+                <div><img src="../img/facilities/idumi/idumi_mainvisual_004.jpg" alt="" /></div>
+                <div><img src="../img/facilities/idumi/idumi_mainvisual_005.jpg" alt="" /></div>
+            </div>
             <p class="line_bottom disp_sp">&nbsp;</p>
             <!-- /メインビジュアル -->
 
@@ -122,6 +150,32 @@
                                 <p>自立支援、受給者証、保険書類の更新等、行政手続きもサポートしています。</p>
                             </div>
                             <img src="../img/facilities/idumi/idumi_activity_photo_004.jpg" width="400" height="260" class="left" />
+                        </div>
+                    </div>
+                </section>
+
+                <section class="work">
+                    <h2>日中の作業例</h2>
+                    <div class="inner">
+                        <div class="work_container">
+                            <div class="work_wrap">
+                                <div class="work_slider">
+                                    <div><img src="../img/facilities/idumi/work_001.jpg" alt="" /></div>
+                                    <div><img src="../img/facilities/idumi/work_002.jpg" alt="" /></div>
+                                    <div><img src="../img/facilities/idumi/work_003.jpg" alt="" /></div>
+                                </div>
+                                <h3>3Dプリンターで作成した<br />オリジナルグッズの販売</h3>
+                                <p>最新の3Dプリンターと手作りの技術を組み合わせ、可愛いオリジナルグッズを制作・販売しています。自分の手がけた作品が形になる達成感を味わえます。</p>
+                            </div>
+
+                            <div class="work_wrap">
+                                <div class="work_slider">
+                                    <div><img src="../img/facilities/idumi/work_004.jpg" alt="" /></div>
+                                    <div><img src="../img/facilities/idumi/work_005.jpg" alt="" /></div>
+                                </div>
+                                <h3>タオルたたみや箱折りなどの<br />軽作業</h3>
+                                <p>手先を使った丁寧な作業を通じて、集中力や作業リズムを養います。簡単な工程からスタートできるため、達成感を得ながら日々の自立に向けたステップアップを目指せます。</p>
+                            </div>
                         </div>
                     </div>
                 </section>

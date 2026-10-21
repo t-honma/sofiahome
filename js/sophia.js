@@ -34,9 +34,13 @@ function facilities_share(){
 }
 
 /* SPグローバルメニューの開閉 ---------------------------------*/
-$(function(){
-    $(".menu").click(function(){
-    	$(this).toggleClass("active");
-        $(".child").slideToggle(300);
+// ※ opossumフォーム(call.js)が $.noConflict(true) でグローバルの $ を消すことがあるため、
+//    読み込み時点の jQuery を引数で保持して使う
+(function($){
+    $(function(){
+        $(".menu").click(function(){
+            $(this).toggleClass("active");
+            $(".child").slideToggle(300);
+        });
     });
-});
+})(window.jQuery);

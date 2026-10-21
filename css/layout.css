@@ -146,9 +146,6 @@ TOP
 ============================================================= */
 @media screen and (max-width: 767px) {
   #top .mainvisual {
-    background-image: url(../img/top/mainvisual_005.jpg);
-    width: 100%;
-    height: 230px;
     background-size: cover;
     background-position: center bottom;
     position: relative;
@@ -163,8 +160,15 @@ TOP
     font-size: 23px;
     font-weight: normal;
     text-align: center;
-    position: relative;
-    top: 91px;
+    position: absolute;
+    margin: auto;
+    height: 1em;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
   }
   #top .mainvisual .frame {
     display: none;
@@ -179,26 +183,54 @@ TOP
   }
   #top .contents section.top-menu {
     margin-top: 30px;
+    margin-bottom: 50px;
   }
-  #top .contents section.top-menu ul {
-    margin: 0 15px;
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap {
+    padding: 0 15px;
   }
-  #top .contents section.top-menu ul li {
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap figure {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    height: 200px;
+  }
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap figure img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: inherit;
+    width: 100%;
+    height: auto;
+  }
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap .text_box h2 {
+    color: #00af4c;
+    font-size: 7vw;
+    font-weight: 600;
+    margin-bottom: 3.5vw;
+    position: relative;
+    text-align: left;
+  }
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap .text_box h2:after {
+    content: "";
+    width: 63vw;
+    height: 1px;
+    background-color: #00af4c;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap .text_box p {
+    margin-bottom: 1.2em;
+  }
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap .text_box a {
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
   }
-  #top .contents section.top-menu ul li h2 {
-    margin-bottom: 5px;
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap:last-of-type {
+    margin-top: 50px;
   }
-  #top .contents section.top-menu ul li h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 2.4rem;
-    margin: 5px 0 15px 0;
-  }
-  #top .contents section.top-menu ul li h3 span {
-    font-size: 1.6rem;
-    font-weight: normal;
+  #top .contents section.top-menu .top-menu_container .top-menu_wrap:last-of-type h2:after {
+    width: 56vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -207,7 +239,7 @@ TOP
     background-size: cover;
     background-position: center bottom;
     width: 100%;
-    height: 550px;
+    height: auto;
     overflow: hidden;
     position: relative;
     margin: -17px 0 0 0;
@@ -221,8 +253,14 @@ TOP
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    position: relative;
-    top: 250px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1em;
+    z-index: 10;
   }
   #top .mainvisual .frame {
     background-image: url(../img/top/mainvisual_frame.png);
@@ -236,53 +274,77 @@ TOP
   #top .contents {
     background-color: #fff;
     margin: -25px 0 0 0;
-    padding: 60px 0 0 0;
+    padding: 0;
   }
   #top .contents .lead {
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0;
+    padding: 100px 0;
     font-size: 1.7rem;
     line-height: 3.2rem;
   }
   #top .contents .top-menu {
     margin-bottom: 20px;
   }
-  #top .contents .top-menu ul {
+  #top .contents .top-menu .top-menu_container {
+    position: relative;
     width: 1000px;
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
-  #top .contents .top-menu ul li {
-    display: inline-block;
-    text-align: center;
+  #top .contents .top-menu .top-menu_container .top-menu_wrap {
+    min-height: 350px;
   }
-  #top .contents .top-menu ul li h2 {
-    margin-bottom: 10px;
+  #top .contents .top-menu .top-menu_container .top-menu_wrap .text_box {
+    width: 430px;
+    margin: 0 0 0 570px;
+    padding: 55px 0;
   }
-  #top .contents .top-menu ul li h3 {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 15px auto;
-    height: 60px;
-    line-height: 2.4rem;
-    vertical-align: middle;
+  #top .contents .top-menu .top-menu_container .top-menu_wrap .text_box h2 {
+    color: #00af4c;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: left;
   }
-  #top .contents .top-menu ul li h3 span {
-    font-size: 1.6rem;
-    font-weight: normal;
+  #top .contents .top-menu .top-menu_container .top-menu_wrap .text_box h2:after {
+    content: "";
+    width: 270px;
+    height: 1px;
+    background-color: #00af4c;
+    position: absolute;
+    top: 50%;
+    right: 0;
   }
-  #top .contents .top-menu ul li h3.recruit {
-    padding: 19px 0 0 0;
+  #top .contents .top-menu .top-menu_container .top-menu_wrap .text_box p {
+    margin-bottom: 1.5em;
   }
-  #top .contents .top-menu ul li img.photo {
+  #top .contents .top-menu .top-menu_container .top-menu_wrap .text_box a {
     display: block;
+    margin: 0 0 0 auto;
+    width: 300px;
+  }
+  #top .contents .top-menu .top-menu_container .top-menu_wrap figure {
+    position: absolute;
+    border-radius: 10px;
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    left: -100px;
+    margin: 0;
+  }
+  #top .contents .top-menu .top-menu_container .top-menu_wrap:last-of-type .text_box {
+    margin: 80px 0 0 0;
+  }
+  #top .contents .top-menu .top-menu_container .top-menu_wrap:last-of-type .text_box h2:after {
+    width: 250px;
+  }
+  #top .contents .top-menu .top-menu_container .top-menu_wrap:last-of-type figure {
+    left: auto;
+    right: -100px;
+  }
+  #top .contents .top-menu .top-menu_container .top-menu_wrap:last-of-type a {
+    margin: 0 0 auto 0;
   }
 }
 /* sub page ============================================================= */
@@ -387,7 +449,7 @@ TOP
     text-align: center;
   }
   section {
-    padding: 0 0 80px 0;
+    padding: 0 0 120px 0;
   }
   section.bg-white {
     background-color: #fff;
@@ -661,6 +723,9 @@ facilities
     vertical-align: middle;
     color: #000;
   }
+  #facilities.idumi .mainvisual {
+    height: auto;
+  }
   #facilities.idumi .page-ttl {
     padding: 10px 0;
   }
@@ -670,7 +735,7 @@ facilities
   }
   #facilities.idumi .contents section.activity {
     background-color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding: 15px 0;
   }
   #facilities.idumi .contents section.activity .inner .activity-box {
@@ -684,6 +749,51 @@ facilities
     font-size: 1.8rem;
     font-weight: bold;
     margin-bottom: 10px;
+  }
+  #facilities.idumi .contents section.work {
+    margin-bottom: 50px;
+  }
+  #facilities.idumi .contents section.work .work_container {
+    padding: 0 10px;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap .work_slider {
+    margin-bottom: 15px;
+    width: 295px;
+    height: 250px;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap .work_slider div > img {
+    width: 100%;
+    height: auto;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap h3 {
+    color: #08b04f;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap p {
+    line-height: 2.4rem;
+  }
+  #facilities.idumi .contents section.work .work_container .work_wrap:last-of-type {
+    margin-top: 20px;
+  }
+  #facilities.idumi .contents section.work .slick-dots {
+    bottom: -35px;
+    text-align: right;
+  }
+  #facilities.idumi .contents section.work .slick-dots li {
+    margin: 0;
+  }
+  #facilities.idumi .contents section.work .slick-dots li button:before {
+    font-size: 10px;
+  }
+  #facilities.idumi .contents section.inside {
+    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -728,13 +838,15 @@ facilities
   #facilities .contents .facilities-index-about ul {
     width: 1000px;
     margin: 0 auto 30px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #facilities .contents .facilities-index-about ul li {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     display: inline-block;
     width: 480px;
-    height: 370px;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -948,6 +1060,49 @@ facilities
     border-bottom: 2px solid #08b04f;
     margin: 20px 0;
     padding-bottom: 10px;
+  }
+  #facilities.idumi .contents section.work .inner .work_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #facilities.idumi .contents section.work .inner .work_container .work_wrap {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 480px;
+  }
+  #facilities.idumi .contents section.work .inner .work_container .work_wrap .work_slider {
+    width: 420px;
+    height: 315px;
+    margin-bottom: 0 !important;
+  }
+  #facilities.idumi .contents section.work .inner .work_container .work_wrap .work_slider div > img {
+    width: 100%;
+    height: auto;
+  }
+  #facilities.idumi .contents section.work .inner .work_container .work_wrap h3 {
+    color: #08b04f;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0.8em 0;
+  }
+  #facilities.idumi .contents section.work .inner .work_container .work_wrap p {
+    font-size: 15px;
+  }
+  #facilities.idumi .contents section.work .slick-dots {
+    bottom: -35px;
+    text-align: right;
+  }
+  #facilities.idumi .contents section.work .slick-dots li {
+    margin: 0;
+  }
+  #facilities.idumi .contents section.work .slick-dots li button:before {
+    font-size: 10px;
   }
 }
 /*=============================================================
@@ -1303,6 +1458,9 @@ recruit 採用情報
   #contact .container .contents .inner {
     padding: 80px 0;
   }
+}
+#contact .container .contents .inner .opossum_iframe {
+  min-height: 600px;
 }
 @media screen and (min-width: 768px) {
   #contact .container .contents .inner .opossum_iframe {
